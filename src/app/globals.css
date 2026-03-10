@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-950: #020617;
+}
+
+@layer base {
+  body {
+    background-color: #020617;
+    color: #f1f5f9;
+  }
+}
+
+@layer utilities {
+  .print-only {
+    display: none;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .print-document {
+    background: white !important;
+    color: black !important;
+    padding: 2rem !important;
+  }
+}
